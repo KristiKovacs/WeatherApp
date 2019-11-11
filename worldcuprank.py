@@ -15,7 +15,7 @@ rows = []
 rows.append(['Rank', 'Team', 'Matches Played', 'Wins', 'Draws', 'Losses', 'Goals For', 'Goals Against'])
 print(rows)
 
-# loop over results
+# looped over results from the url in the table
 for result in results:
     # find all columns per result
     data = result.find_all('td')
@@ -23,7 +23,7 @@ for result in results:
     if len(data) == 0:
         continue
 
-    # write columns to variables
+    # wrote columns to the variables
     rank = data[0].getText()
     team = data[1].getText()
     matches = data[2].getText()
